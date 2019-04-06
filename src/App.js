@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { Card, Button, Zoom } from "@material-ui/core";
 
@@ -12,17 +11,21 @@ function App(props) {
     <Card className={classes.root}>
       {val ? (
         <Zoom in={!!val}>
-            <Button
-              variant="contained"
-              color="primary"
-              className={classes.buttonMain}
-              onClick={() => setVal("")}
-            >
-              {val}
-            </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.buttonMain}
+            onClick={() => setVal("")}
+          >
+            {val}
+          </Button>
         </Zoom>
       ) : (
-        <Grid style={{ height: "calc(100vh) - 32px", width: '100%' }} container spacing={0}>
+        <Grid
+          style={{ height: "calc(100vh) - 32px", width: "100%" }}
+          container
+          spacing={0}
+        >
           <Grid className={classes.griddy} container item xs={12} spacing={0}>
             <FormRow
               setVal={setVal}
@@ -69,11 +72,11 @@ function styles(theme) {
     root: {
       display: "flex",
       justifyContent: "space-between",
-      height: "calc(100vh )",
-      width: '100%'
+      height: "100vh",
+      width: "100%"
     },
     griddy: {
-      height: "99.5 vh"
+      height: "99%"
     },
     button: {
       width: "96%",
@@ -92,7 +95,7 @@ function styles(theme) {
       marginLeft: "2%",
       marginRight: "2%",
       marginTop: "2%",
-      height: "calc(100vh - 24px)",
+      height: "calc(97vh - 24px)",
       fontWeight: 600,
       fontSize: "5rem",
       animationDuration: ".5s",
