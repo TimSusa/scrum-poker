@@ -11,6 +11,12 @@ yarn
 yarn dev
 ``` 
 
+### Deploy
+You can deploy with now from zeit or just ask me to do that. Otherwise, you can just do: 
+```
+now
+``` 
+
 ## Support on Beerpay
 Hey dude! Help me out for a couple of :beers:!
 
