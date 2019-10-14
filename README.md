@@ -1,3 +1,8 @@
+### Why Scrum Poker?
+This is just a version of scrum poker without adds. 
+It is not the best code and this is not rocket science. 
+We just want scrum-poker without getting sick of human infected cards!
+
 ### Demo
 https://scrum-poker.timsusa.now.sh
 
