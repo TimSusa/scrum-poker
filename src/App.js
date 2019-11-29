@@ -6,14 +6,14 @@ import { Card, Button, Zoom } from "@material-ui/core";
 
 function App(props) {
   const { classes } = props;
-  const [val, setVal] = React.useState("");
+  const [val, setVal] = React.useState(null);
   return (
     <Card className={classes.root}>
       {val ? (
         <Zoom in={!!val}>
           <Button
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             className={classes.buttonMain}
             onClick={() => setVal("")}
           >
@@ -60,15 +60,6 @@ export default withStyles(styles)(App);
 
 function styles(theme) {
   return {
-    "@keyframes slidein": {
-      from: {
-        transform: "rotate3d(0, 1, 0, 3.142rad)"
-      },
-
-      to: {
-        transform: "rotate3d(0, 1, 0, 0)"
-      }
-    },
     root: {
       display: "flex",
       justifyContent: "space-between",
@@ -100,6 +91,15 @@ function styles(theme) {
       fontSize: "5rem",
       animationDuration: ".5s",
       animationName: "slidein"
+    },
+    "@keyframes slidein": {
+      from: {
+        transform: "rotate3d(0, 1, 0, 3.142rad)"
+      },
+
+      to: {
+        transform: "rotate3d(0, 1, 0, 0)"
+      }
     }
   };
 }
@@ -109,11 +109,11 @@ function FormRow(props) {
 
   return (
     <React.Fragment>
-      {itemArray.map((item) => (
-        <Grid item xs={4}>
+      {itemArray.map((item, i) => (
+        <Grid item xs={4} key={`${i}+grid`}>
           <Button
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             className={classes.button}
             onClick={(event) => setVal(event.currentTarget.textContent)}
           >
