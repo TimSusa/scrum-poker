@@ -62,7 +62,7 @@ function styles(theme) {
       width: '100%'
     },
     griddy: {
-      height: '99%'
+      height: '94%'
     },
     button: {
       width: '96%',
