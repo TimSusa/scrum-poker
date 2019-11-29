@@ -1,9 +1,9 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { GridItem } from "./GridItem";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { GridItem } from './GridItem';
 
-describe("GridItem", () => {
-  test("snapshot renders", () => {
+describe('GridItem', () => {
+  test('snapshot renders', () => {
     const props = {
       classes: {},
       itemArray: [],
