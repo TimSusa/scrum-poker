@@ -41,7 +41,7 @@ function App(props) {
                 "20",
                 "40",
                 "100",
-                "Inf"
+                "INF"
               ]}
               classes={classes}
             />
@@ -89,18 +89,7 @@ function styles(theme) {
       height: "calc(97vh - 24px)",
       fontWeight: 600,
       fontSize: "5rem",
-      // animationDuration: ".5s",
-      // animationName: "slidein"
     },
-    // "@keyframes slidein": {
-    //   from: {
-    //     transform: "rotate3d(0, 1, 0, 3.142rad)"
-    //   },
-
-    //   to: {
-    //     transform: "rotate3d(0, 1, 0, 0)"
-    //   }
-    // }
   };
 }
 
@@ -110,7 +99,7 @@ function FormRow(props) {
   return (
     <React.Fragment>
       {itemArray.map((item, i) => (
-        <Grid item xs={4} key={`${i}+grid`}>
+        <Grid item xs={4} key={`${i}+griditem`}>
           <Button
             variant='contained'
             color='primary'
