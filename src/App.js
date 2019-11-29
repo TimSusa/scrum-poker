@@ -62,15 +62,14 @@ function styles(theme) {
       width: '100%'
     },
     griddy: {
-      height: '94%'
+      marginTop: "1.1%",
+      marginLeft: "1.2%"
     },
     button: {
       width: '96%',
       height: '96%',
       fontWeight: 600,
-      fontSize: '2rem',
-      marginLeft: '2%',
-      marginTop: '2%'
+      fontSize: '3rem',
     },
     mainButtonPaper: {
       padding: theme.spacing.unit
