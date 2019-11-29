@@ -89,18 +89,18 @@ function styles(theme) {
       height: "calc(97vh - 24px)",
       fontWeight: 600,
       fontSize: "5rem",
-      animationDuration: ".5s",
-      animationName: "slidein"
+      // animationDuration: ".5s",
+      // animationName: "slidein"
     },
-    "@keyframes slidein": {
-      from: {
-        transform: "rotate3d(0, 1, 0, 3.142rad)"
-      },
+    // "@keyframes slidein": {
+    //   from: {
+    //     transform: "rotate3d(0, 1, 0, 3.142rad)"
+    //   },
 
-      to: {
-        transform: "rotate3d(0, 1, 0, 0)"
-      }
-    }
+    //   to: {
+    //     transform: "rotate3d(0, 1, 0, 0)"
+    //   }
+    // }
   };
 }
 
