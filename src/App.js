@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
+import { GridItem } from './GridItem'
 import Grid from "@material-ui/core/Grid";
 import { Card, Button, Zoom } from "@material-ui/core";
 
@@ -21,13 +22,8 @@ function App(props) {
           </Button>
         </Zoom>
       ) : (
-        <Grid
-          style={{ height: "calc(100vh) - 32px", width: "100%" }}
-          container
-          spacing={0}
-        >
           <Grid className={classes.griddy} container item xs={12} spacing={0}>
-            <FormRow
+            <GridItem
               setVal={setVal}
               itemArray={[
                 "0",
@@ -46,7 +42,6 @@ function App(props) {
               classes={classes}
             />
           </Grid>
-        </Grid>
       )}
     </Card>
   );
@@ -88,32 +83,8 @@ function styles(theme) {
       marginTop: "2%",
       height: "calc(97vh - 24px)",
       fontWeight: 600,
-      fontSize: "5rem",
-    },
+      fontSize: "5rem"
+    }
   };
 }
 
-function FormRow(props) {
-  const { classes, itemArray, setVal = [""] } = props;
-
-  return (
-    <React.Fragment>
-      {itemArray.map((item, i) => (
-        <Grid item xs={4} key={`${i}+griditem`}>
-          <Button
-            variant='contained'
-            color='primary'
-            className={classes.button}
-            onClick={(event) => setVal(event.currentTarget.textContent)}
-          >
-            {item}
-          </Button>
-        </Grid>
-      ))}
-    </React.Fragment>
-  );
-}
-
-FormRow.propTypes = {
-  classes: PropTypes.object.isRequired
-};
