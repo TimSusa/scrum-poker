@@ -14,23 +14,8 @@ jobs:
             - yarn-packages-{{ checksum "yarn.lock" }}
       - run: yarn
       - run:
-          name: Run linter and tests
-          command: yarn lint && yarn test:midi-bricks && git status
-      # - run:
-      #     name: Authenticate with registry
-      #     command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-      # - run:
-      #     name: Publish packages
-      #     command: yarn publish-ci
-      - run:
           name: Build scrum poka
           command: yarn build
-      # - run:
-      #     name: Deploy Release to github
-      #     command: yarn deploy:midi-bricks-electron-ci
-      # - run:
-      #     name: Fullfil release
-      #     command: yarn release-ci
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}

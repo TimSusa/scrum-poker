@@ -5,19 +5,19 @@ import Grid from "@material-ui/core/Grid";
 
 export function GridItem(props) {
   const {
-    classes: { button },
+    classes,
     itemArray,
     setVal
   } = props;
 
   return (
     <Fragment>
-      {itemArray.map((item, i) => (
+      {(itemArray || []).map((item, i) => (
         <Grid item xs={4} key={`${i}-grid-item`}>
           <Button
             variant='contained'
             color='primary'
-            className={button}
+            className={classes.button}
             onClick={(event) => setVal(event.currentTarget.textContent)}
           >
             {item}
@@ -29,7 +29,7 @@ export function GridItem(props) {
 }
 
 GridItem.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.object,
   itemArray: PropTypes.array,
   setVal: PropTypes.func
 };
